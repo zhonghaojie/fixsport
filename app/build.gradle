@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion project_config.compile_sdk
+    buildToolsVersion project_config.build_sdk
+    defaultConfig {
+        applicationId project_config.application_id
+        minSdkVersion project_config.min_sdk
+        targetSdkVersion project_config.target_sdk
+        versionCode project_config.version_code
+        versionName project_config.version_name
+        multiDexEnabled project_config.multidex
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation project(":core_mvvm")
+    implementation project(":core_library_ble")
+    implementation library_source.constraintLayout
+    implementation library_source.appcompat
+    implementation library_source.nav_fragment
+    implementation library_source.nav_ui
+    implementation 'me.weyye.hipermission:library:1.0.3'
+    implementation 'in.srain.cube:ultra-ptr:1.0.11'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    implementation library_source.multidex
+    implementation library_source.bugly
+    implementation project(':FastBleLib')
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    //加载对话框
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+}

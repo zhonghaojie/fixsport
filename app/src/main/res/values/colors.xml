@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F5F5F5</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="bg_color">#F5F5F5</color>
+    <color name="split">#CCCCCC</color>
+    <color name="top_main">#A9A9A9</color>
+    <color name="top_device">#87CEFA</color>
+    <color name="overColor">#92C6FF</color>
+    <color name="innerColor">#CCE4FF</color>
+    <color name="splitColor">#A4CFFF</color>
+    <color name="detailTop">#69C1E7</color>
+    <color name="white">#FFFFFF</color>
+    <color name="line_bg">#e5e5e5</color>
+    <color name="color_space_line">#FFEEEEEE</color>
+    <color name="colorRightItemNor">#ffffff</color>
+    <color name="colorRightItemPressed">#f6f6f6</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="black">#000</color>
+    <color name="colorBg">#FAFAFA</color>
+    <color name="colorSelect">#54bbc1</color>
+    <color name="grey">#7E7878</color>
+</resources>

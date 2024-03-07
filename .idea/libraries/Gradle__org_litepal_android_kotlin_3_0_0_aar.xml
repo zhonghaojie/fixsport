@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.litepal.android:kotlin:3.0.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eca92b9a3e829158cbb0120c4acb6806/kotlin-3.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eca92b9a3e829158cbb0120c4acb6806/kotlin-3.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eca92b9a3e829158cbb0120c4acb6806/kotlin-3.0.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.litepal.android/kotlin/3.0.0/d2fb29e7370ce58feee04128e064d84d0ae6a221/kotlin-3.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

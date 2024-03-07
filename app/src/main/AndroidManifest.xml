@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.flexispot.ble">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:name=".LuMan"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".gui.WelcomeActivity"
+            android:theme="@style/AppTheme0">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".gui.devices.DevicesActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.add.AddActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.around.AroundActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.connected.ConnectedActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.device.desk.DeskActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.device.desk_rotate.RotateDeskActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.device.desk.DeskTwoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.device.media.MediaActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.device.rack.RackActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.threadMill.ThreadMillActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.threadMill.ThreadSettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.threadMill.WalkerSettingTargetActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.threadMill.ThreadMillNoviceGuideOne"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.threadMill.ThreadMillNoviceGuideTwo"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.threadMill.ThreadMillNoviceGuideThree"
+            android:launchMode="singleTop" />
+        <activity
+        android:name=".gui.threadMill.ThreadMillNoviceGuideFour"
+        android:launchMode="singleTop" />
+        <activity
+            android:name=".gui.threadMill.ThreadMillNoviceGuideFive"
+            android:launchMode="singleTop" />
+        <activity android:name=".ota.ui.AdvDeviceListActivity"/>
+    <activity android:name=".ota.ui.AdvDeviceListActivity_Scanner"/>
+    <activity android:name=".ota.ui.DeviceDetailActivity" />
+    <activity android:name=".ota.ui.file.FileSelectActivity" />
+        <activity android:name=".ota.ui.DeviceTwoDetailActivity"/>
+        <activity
+            android:name=".gui.device.rack.RackTwoActivity"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".gui.device.media.MediaTwoActivity"
+            android:launchMode="singleTop" />
+        <!--关于全面屏-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+        <!--关于刘海屏-->
+        <!--适配华为（huawei）刘海屏-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <!--适配小米（xiaomi）刘海屏-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+    </application>
+
+</manifest>

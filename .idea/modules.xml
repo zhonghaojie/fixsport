@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/flexispotIntellegence.iml" filepath="$PROJECT_DIR$/flexispotIntellegence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FastBleLib/flexispotIntellegence.FastBleLib.iml" filepath="$PROJECT_DIR$/.idea/modules/FastBleLib/flexispotIntellegence.FastBleLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/flexispotIntellegence.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/flexispotIntellegence.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core_library_ble/flexispotIntellegence.core_library_ble.iml" filepath="$PROJECT_DIR$/.idea/modules/core_library_ble/flexispotIntellegence.core_library_ble.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core_mvvm/flexispotIntellegence.core_mvvm.iml" filepath="$PROJECT_DIR$/.idea/modules/core_mvvm/flexispotIntellegence.core_mvvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core_util/flexispotIntellegence.core_util.iml" filepath="$PROJECT_DIR$/.idea/modules/core_util/flexispotIntellegence.core_util.iml" />
+    </modules>
+  </component>
+</project>

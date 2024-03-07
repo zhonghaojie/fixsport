@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/devicesFragment">
+
+    <fragment
+        android:id="@+id/devicesFragment"
+        android:name="com.flexispot.ble.gui.devices.DevicesActivity"
+        android:label="DevicesFragment">
+        <action
+            android:id="@+id/action_devicesFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_devicesFragment_to_mediaFragment"
+            app:destination="@id/mediaFragment" />
+        <action
+            android:id="@+id/action_devicesFragment_to_deskFragment"
+            app:destination="@id/deskFragment" />
+        <action
+            android:id="@+id/action_devicesFragment_to_rackFragment"
+            app:destination="@id/rackFragment" />
+        <action
+            android:id="@+id/action_devicesFragment_to_rotateDeskFragment"
+            app:destination="@id/rotateDeskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.flexispot.ble.gui.add.AddActivity"
+        android:label="AddFragment">
+        <action
+            android:id="@+id/action_addFragment_to_aroundFragment"
+            app:destination="@id/aroundFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aroundFragment"
+        android:name="com.flexispot.ble.gui.around.AroundActivity"
+        android:label="AroundFragment">
+        <action
+            android:id="@+id/action_aroundFragment_to_connectedFragment"
+            app:destination="@id/connectedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/connectedFragment"
+        android:name="com.flexispot.ble.gui.connected.ConnectedActivity"
+        android:label="ConnectedFragment">
+        <action
+            android:id="@+id/action_connectedFragment_to_mediaFragment"
+            app:destination="@id/mediaFragment" />
+        <action
+            android:id="@+id/action_connectedFragment_to_deskFragment"
+            app:destination="@id/deskFragment" />
+        <action
+            android:id="@+id/action_connectedFragment_to_rackFragment"
+            app:destination="@id/rackFragment" />
+        <action
+            android:id="@+id/action_connectedFragment_to_rotateDeskFragment"
+            app:destination="@id/rotateDeskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deskFragment"
+        android:name="com.flexispot.ble.gui.device.desk.DeskActivity"
+        android:label="DeskFragment">
+        <action
+            android:id="@+id/action_deskFragment_to_devicesFragment"
+            app:popUpTo="@id/devicesFragment"
+            app:destination="@id/devicesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mediaFragment"
+        android:name="com.flexispot.ble.gui.device.media.MediaActivity"
+        android:label="MediaFragment">
+        <action
+            android:id="@+id/action_mediaFragment_to_devicesFragment"
+            app:popUpTo="@id/devicesFragment"
+            app:destination="@id/devicesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rackFragment"
+        android:name="com.flexispot.ble.gui.device.rack.RackActivity"
+        android:label="RackFragment">
+        <action
+            android:id="@+id/action_rackFragment_to_devicesFragment"
+            app:popUpTo="@id/devicesFragment"
+            app:destination="@id/devicesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rotateDeskFragment"
+        android:name="com.flexispot.ble.gui.device.desk_rotate.RotateDeskActivity"
+        android:label="RotateDeskFragment">
+        <action
+            android:id="@+id/action_rotateDeskFragment_to_devicesFragment"
+            app:destination="@id/devicesFragment" />
+    </fragment>
+</navigation>

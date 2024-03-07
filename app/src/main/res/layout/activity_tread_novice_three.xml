@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@mipmap/ic_back">
+
+            <TextView
+                android:id="@+id/tv_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/novice_guide"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_two"
+            android:textColor="#ff999999"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:layout_below="@+id/toolbar"
+            android:visibility="gone"
+
+            />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/text"
+            android:background="@mipmap/pic_two"
+            android:layout_marginTop="25dp"
+            />
+
+        <ImageView
+            android:id="@+id/image_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/text"
+            android:background="@mipmap/pic_two_e"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            />
+
+
+        <TextView
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/press"
+            android:textColor="#ff333333"
+            android:textSize="17sp"
+            android:layout_below="@+id/image"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentBottom="true"
+
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+</layout>

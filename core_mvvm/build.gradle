@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion project_config.compile_sdk
+    buildToolsVersion project_config.build_sdk
+    defaultConfig {
+        minSdkVersion project_config.min_sdk
+        targetSdkVersion project_config.target_sdk
+        versionCode project_config.version_code
+        versionName project_config.version_name
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation library_source.multidex
+    implementation library_source.bugly
+    api library_source.viewmodel
+    api library_source.lifecycle
+    api library_source.recyclerview
+    api project(":core_util")
+    api library_source.ktx
+    api 'com.gyf.immersionbar:immersionbar:2.3.3'
+}

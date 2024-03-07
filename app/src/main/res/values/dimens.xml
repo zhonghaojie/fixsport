@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding">9dp</dimen>
+    <dimen name="title_size">17sp</dimen>
+    <dimen name="split">0.75dp</dimen>
+    <dimen name="oval_width">2dp</dimen>
+    <dimen name="split_width">2dp</dimen>
+
+</resources>

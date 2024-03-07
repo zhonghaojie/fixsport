@@ -1,0 +1,4 @@
+<resources>
+    <string name="request_fail">Request Error, Try Later.</string>
+    <string name="empty_response">Data Error</string>
+</resources>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_device"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/device_detail"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center" />
+
+
+        <TextView
+            android:id="@+id/tv_restore"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:text="@string/restore"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toTopOf="@id/tv_title"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@mipmap/ic_loading" />
+
+        <TextView
+            android:id="@+id/tv_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="60sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_unit"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            android:layout_marginTop="112dp" />
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="mm"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_height"
+            app:layout_constraintBottom_toBottomOf="@id/tv_height" />
+
+        <ImageView
+            android:id="@+id/iv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_height"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_label"
+            app:layout_constraintTop_toTopOf="@id/tv_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_label" />
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/height"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="33dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_unit" />
+
+        <TextView
+            android:id="@+id/tv_error_rack"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40.5dp"
+            android:text="@string/device_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/tv_to_lowest_rack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/to_lowest"
+            app:layout_constraintTop_toBottomOf="@id/tv_error_rack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/iv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_error"
+            android:layout_marginTop="10.5dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_to_lowest_rack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.flexispot.ble.gui.view.MoreLongRackHandleImageView
+            android:id="@+id/tv_down"
+            android:layout_width="130dp"
+            android:clickable="true"
+            android:tag="2"
+            android:layout_height="46dp"
+            android:background="@drawable/bg_adjust"
+            android:src="@mipmap/ic_down"
+            android:scaleType="centerInside"
+            android:gravity="center"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_up"
+            app:layout_constraintTop_toBottomOf="@id/tv_label"
+            android:layout_marginTop="125dp" />
+
+        <com.flexispot.ble.gui.view.MoreLongRackHandleImageView
+            android:id="@+id/tv_up"
+            android:layout_width="130dp"
+            android:layout_height="46dp"
+            android:clickable="true"
+            android:tag="1"
+            android:background="@drawable/bg_adjust"
+            android:src="@mipmap/ic_up"
+            android:scaleType="centerInside"
+            android:layout_marginStart="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_down"
+            app:layout_constraintBottom_toBottomOf="@id/tv_down" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gp_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_height,tv_height_label,tv_unit"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gp_reset"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_error_rack,tv_to_lowest_rack,iv_error"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#F9F9F9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            android:id="@+id/tv_walker_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/set_speed"
+            android:textColor="#000"
+            android:textSize="17sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <LinearLayout
+        android:id="@+id/lin_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rel_m1"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/btn_right_item_selector"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="21dp"
+                android:gravity="center"
+                android:text="M1"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/text_m1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_m2"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/btn_right_item_selector"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="21dp"
+                android:gravity="center"
+                android:text="M2"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/text_m2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rel_m3"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/btn_right_item_selector"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="21dp"
+                android:gravity="center"
+                android:text="M3"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/text_m3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:paddingTop="16dp">
+
+    <EditText
+        android:id="@+id/et_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="8266_module.bin"
+        android:hint="input file name" />
+
+    <Button
+        android:id="@+id/download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="download"
+        android:textColor="@color/colorBg" />
+
+
+    <ListView
+        android:id="@+id/lv_file"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

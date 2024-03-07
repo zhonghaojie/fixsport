@@ -1,0 +1,2 @@
+include ':app', ':core_util', ':core_mvvm', ':core_library_ble', ':FastBleLib'
+rootProject.name='flexispotIntellegence'

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_item_around"
+    android:orientation="vertical"
+    android:layout_width="302dp"
+    android:layout_height="180dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:text="@string/remind"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dis_connect_service"
+        android:paddingStart="34dp"
+        android:paddingEnd="34dp"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginTop="17dp" />
+
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E8E8E8"/>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="#017AFF"
+        android:textSize="16sp"
+        android:text="@string/submut"/>
+
+</LinearLayout>

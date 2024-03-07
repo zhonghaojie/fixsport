@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_device"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include
+            layout="@layout/topbar_w"
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="60sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_unit"
+            app:layout_constraintTop_toBottomOf="@id/rl_top"
+            android:layout_marginTop="112dp" />
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_value"
+            app:layout_constraintBottom_toBottomOf="@id/tv_value" />
+
+        <ImageView
+            android:id="@+id/iv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_height"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_label"
+            app:layout_constraintTop_toTopOf="@id/tv_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_label" />
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/height"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="33dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_unit" />
+
+        <com.flexispot.ble.gui.view.MoreLongHandleImageView
+            android:id="@+id/tv_down"
+            android:layout_width="130dp"
+            android:tag="2"
+            android:clickable="true"
+            android:layout_height="46dp"
+            android:background="@drawable/bg_adjust"
+            android:src="@mipmap/ic_down"
+            android:scaleType="centerInside"
+            android:gravity="center"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_up"
+            app:layout_constraintTop_toBottomOf="@id/tv_label"
+            android:layout_marginTop="125dp" />
+
+        <com.flexispot.ble.gui.view.MoreLongHandleImageView
+            android:id="@+id/tv_up"
+            android:layout_width="130dp"
+            android:layout_height="46dp"
+            android:clickable="true"
+            android:tag="1"
+            android:background="@drawable/bg_adjust"
+            android:src="@mipmap/ic_up"
+            android:scaleType="centerInside"
+            android:layout_marginStart="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_down"
+            app:layout_constraintBottom_toBottomOf="@id/tv_down" />
+
+        <TextView
+            android:id="@+id/tv_stand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_stand"
+            android:text="@string/stand"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_sit"
+            app:layout_constraintTop_toBottomOf="@id/tv_up"
+            android:layout_marginTop="125dp" />
+
+        <TextView
+            android:id="@+id/tv_sit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sit"
+            android:drawableTop="@mipmap/ic_sit"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_stand"
+            app:layout_constraintBottom_toBottomOf="@id/tv_stand" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

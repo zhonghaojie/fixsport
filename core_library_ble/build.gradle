@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion project_config.compile_sdk
+    buildToolsVersion project_config.build_sdk
+    defaultConfig {
+        minSdkVersion project_config.min_sdk
+        targetSdkVersion project_config.target_sdk
+        versionCode project_config.version_code
+        versionName project_config.version_name
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main{
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation library_source.coroutine_core
+    implementation library_source.coroutine_android
+    implementation library_source.appcompat
+}

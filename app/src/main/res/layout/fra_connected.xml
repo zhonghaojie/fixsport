@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/topbar" />
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="match_parent"
+            android:layout_marginStart="15dp"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_item_around"
+            android:layout_height="258dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/tv_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/device_name"
+            android:layout_marginTop="21.5dp"
+            android:layout_marginStart="14.5dp"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:maxLength="15"
+            android:layout_height="44dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/bg_item_around"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:paddingStart="14.5dp"
+            android:paddingEnd="14.5dp"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:textColor="#333333"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="@string/hint_device_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14.5dp"
+            android:layout_marginTop="7.5dp"
+            android:text="@string/tips_two"
+            android:textColorHint="#999999"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:text="@string/experience"
+            android:gravity="center"
+            android:layout_marginTop="104.5dp"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:background="@drawable/bg_experience"
+            android:layout_width="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+</layout>
